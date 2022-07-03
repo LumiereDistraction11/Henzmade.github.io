@@ -1,0 +1,80 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	font-family: montserrat;
+}
+nav{
+	background: #333333;
+	height: 80px;
+	width: 100%;
+}
+label.logo{
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a{
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+active,a:hover{
+	background: #eb9407;
+	transition: .5s;
+}
+.slides{
+	width: 100%;
+	position: relative;
+}
+.slides .slide{
+	display: none;
+}
+.slides .slide img{
+	width: 100%;
+	animation-name: fade;
+	animation-duration: 1s;
+}
+.slides .navigation{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	justify-content: space-between;
+	width: 100% 
+}
+.slides .navigation .prev, .slides .navigation .next{
+	cursor: pointer;
+	padding: 16px;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	background: rgba(0,0,0,0.2);
+	user-select: none;
+	transition: 0.6s;
+}
+.slides .navigation .prev:hover, .slides .navigation .next:hover{
+	background: rgba(0,0,0,1);
+}
+@keyframes fade {
+	from{opacity: 0.3}
+	to {opacity: 1}
+
+}
